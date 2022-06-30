@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial;
+	padding: 10px;
+	background: #f1f1f1;
+}
+
+/* 页眉/Blog 标题 */
+.header {
+	padding: 15px;
+	text-align: left;
+	background: white;
+	height: 100px;
+}
+
+.header h1 {
+	font-size: 50px;
+}
+
+/* 设置上导航栏的样式 */
+.topnav {
+	overflow: hidden;
+	background-color: #333;
+}
+
+/* 设置 topnav 链接的样式 */
+.topnav a {
+	float: left;
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+/* 改变鼠标悬停时的颜色 */
+.topnav a:hover {
+	background-color: #ddd;
+	color: black;
+}
+
+/* 创建两个不相等的彼此并排的浮动列 */
+/* 左列 */
+.leftcolumn {
+	float: left;
+	width: 85%;
+}
+
+/* 右列 */
+.rightcolumn {
+	float: left;
+	width: 15%;
+	background-color: white;
+	padding-left: 20px;
+}
+
+/* 图像 */
+.photo {
+	background-color: #aaa;
+	width: 100%;
+	padding: 50px;
+	float: left;
+}
+
+/* 为文章添加卡片效果 */
+.card {
+	background-color: white;
+	width: 85%;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+/* 清除列之后的浮动 */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* 页脚 */
+.footer {
+	padding: 20px;
+	text-align: center;
+	background: #ddd;
+	margin-top: 20px;
+}
+/* 响应式布局 - 当屏幕的宽度小于 800 像素时，使两列堆叠而不是并排 */
+@media screen and (max-width: 800px) {
+	.leftcolumn, .rightcolumn {
+		width: 100%;
+		padding: 0;
+	}
+}
+
+/* 响应式布局 - 当屏幕的宽度小于 400 像素时，使导航链接堆叠而不是并排 */
+@media screen and (max-width: 400px) {
+	.topnav a {
+		float: none;
+		width: 100%;
+	}
+}
+</style>
+</head>
+<body>
+	<div class="header">
+		<form action="PleaseLoginServlet" method="post">
+			<div class="leftcolumn">
+				<img src="images/药店LOGO.png" width="250" height="70" /> <input
+					type="text" placeholder="请输入关键字" name="proname"> <input
+					type="submit" value="搜索">
+			</div>
+			<div class="rightcolumn">
+				<a href="Login.jsp"><input type="button" value="登录" /></a> <a
+					href="Register.jsp"><input type="button" value="免费注册"></a>
+			</div>
+		</form>
+	</div>
+
+	<div class="topnav">
+		<a href="FirstPage.html"+"">网站首页</a> <a href="PleaseLoginServlet">感冒咳嗽</a>
+		<a href="PleaseLoginServlet">解热镇痛</a> <a href="PleaseLoginServlet">儿科用药</a>
+		<a href="PleaseLoginServlet">补益安神</a> <a href="PleaseLoginServlet">心脑血管</a>
+		<a href="PleaseLoginServlet">家庭常备</a> <a href="PleaseLoginServlet">肠胃用药</a>
+		<a href="PleaseLoginServlet">皮肤用药</a>
+	</div>
+
+
+	<div class="photo">
+		<table cellpadding="10" align="center">
+			<tr>
+				<td align="center"><a href="PleaseLoginServlet"> <img
+						src="images/999感冒灵颗粒感冒灵冲剂.jpg" width="150" height="150" />
+				</a></td>
+				<td align="center"><a href="PleaseLoginServlet"> <img
+						src="images/999强力枇杷露120ml止咳糖浆.jpg" width="150" height="150" /></td>
+				<td align="center"><a href="PleaseLoginServlet"> <img
+						src="images/八宝惊风散清热解毒感冒发热.jpg" width="150" height="150" />
+				</a></td>
+				<td align="center"><a href="PleaseLoginServlet"> <img
+						src="images/白云山板蓝根颗粒20袋清热解毒.jpg" width="150" height="150" />
+				</a></td>
+				<td align="center"><a href="PleaseLoginServlet"> <img
+						src="images/白云山咳特灵胶囊30粒.jpg" width="150" height="150" />
+				</a></td>
+			</tr>
+			<tr>
+				<td align="center">999感冒灵颗粒<br />售价：54
+				</td>
+				<td align="center">999强力枇杷露<br />售价：15
+				</td>
+				<td align="center">八宝惊风散清热解毒<br />售价：45
+				</td>
+				<td align="center">板蓝根颗粒<br />售价：36
+				</td>
+				<td align="center">咳特灵胶囊<br />售价：9
+				</td>
+			</tr>
+			<tr>
+				<td align="center"><a href="PleaseLoginServlet"> <img
+						src="images/钙尔奇 D 碳酸钙D3片 0.6g100片1瓶盒.jpg" width="150" height="150" />
+				</a></td>
+				<td align="center"><a href="PleaseLoginServlet"> <img
+						src="images/哈药三精复方葡萄糖酸钙口服溶液12支.jpg" width="150" height="150" />
+				</a></td>
+				<td align="center"><a href="PleaseLoginServlet"> <img
+						src="images/健康云南白药创可贴100片轻巧透气型.jpg" width="150" height="150" />
+				</a></td>
+				<td align="center"><a href="PleaseLoginServlet"> <img
+						src="images/山秀烫疮油 30ml1瓶.jpg" width="150" height="150" />
+				</a></td>
+				<td align="center"><a href="PleaseLoginServlet"> <img
+						src="images/无菌棉签.jpg" width="150" height="150" />
+				</a></td>
+			</tr>
+			<tr>
+				<td align="center">碳酸钙片<br />售价：78
+				</td>
+				<td align="center">葡萄糖酸钙口服液<br />售价：85
+				</td>
+				<td align="center">云南白药创可贴<br />售价：12
+				</td>
+				<td align="center">烫疮油<br />售价：59
+				</td>
+				<td align="center">无菌棉签<br />售价：10
+				</td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
